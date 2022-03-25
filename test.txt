@@ -1,0 +1,19 @@
+
+
+Results for the tiny array
+insert 39.084 μs
+append 64.417 μs
+Results for the small array
+insert 14 μs
+append 12.292 μs
+Results for the medium array
+insert 167.167 μs
+append 44.291 μs
+Results for the large array
+insert 8.771666 ms
+append 384.583 μs
+Results for the extraLargeArray
+insert 5.101264917 s
+append 2.690042 ms
+
+As the array being passed into each function gets bigger and bigger, one functoin scales noticeably better than the other. The append function, which uses the .push method, is much faster with larger arrays than the insert function, which uses the .unshift method. This is because the .unshift method requires that each index of the array be shifted on each iteration of the array, while the .push method only requires that a value is appened onto the end of the array on each iteration.
